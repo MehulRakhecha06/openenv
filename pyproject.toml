@@ -1,15 +1,22 @@
 [project]
 name = "support-triage-env"
-version = "1.0.0"
-description = "A Support Triage AI Environment for OpenEnv"
-dependencies = [
-    "fastapi",
-    "uvicorn",
-    "pydantic",
-    "requests",
-    "openai"
-]
+version = "0.1.0"
+description = "Support Triage AI Environment"
+readme = "README.md"
 requires-python = ">=3.10"
+# Added the required OpenEnv dependency
+dependencies = [
+    "openenv-core>=0.2.0",
+    "fastapi>=0.104.0",
+    "pydantic>=2.0.0",
+    "uvicorn>=0.24.0",
+    "requests>=2.25.0",
+    "openai>=2.7.2"
+]
+
+# This tells the validator how to run your server
+[project.scripts]
+server = "app:app"
 
 [build-system]
 requires = ["setuptools>=61.0"]

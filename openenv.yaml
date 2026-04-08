@@ -1,0 +1,10 @@
+spec_version: "1.0"
+name: "SupportTriage-v1"
+entry_point: "app:app"
+tasks:
+  - id: "triage_basics"
+    difficulty: "easy"
+  - id: "vip_priority"
+    difficulty: "medium"
+  - id: "full_resolve"
+    difficulty: "hard"

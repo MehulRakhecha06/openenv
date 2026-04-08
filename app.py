@@ -48,6 +48,21 @@ class SupportEnv:
 # Initialize the environment after the class definition
 env = SupportEnv()
 
+@app.get("/")
+def read_root():
+    """Fixes the 'Not Found' error on the homepage"""
+    return {
+        "status": "Online",
+        "environment": "Support Triage Simulator",
+        "location": "server/app.py",
+        "endpoints": {
+            "docs": "/docs",
+            "health": "/health",
+            "reset": "/reset (POST)",
+            "step": "/step (POST)"
+        }
+    }
+
 @app.post("/reset")
 def reset(): return env.reset()
 

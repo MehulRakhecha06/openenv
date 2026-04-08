@@ -16,7 +16,7 @@ dependencies = [
 
 # This tells the validator how to run your server
 [project.scripts]
-server = "server.app:app"
+server = "server.app:main"
 
 [build-system]
 requires = ["setuptools>=61.0"]
